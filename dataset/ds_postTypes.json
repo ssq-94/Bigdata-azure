@@ -1,0 +1,21 @@
+{
+	"name": "ds_postTypes",
+	"properties": {
+		"description": "A datasets represents the postTypes tables on Postgres",
+		"linkedServiceName": {
+			"referenceName": "ls_rds_pg",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds-bd-project"
+		},
+		"annotations": [],
+		"type": "PostgreSqlV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "raw_st",
+			"table": "posttypes"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

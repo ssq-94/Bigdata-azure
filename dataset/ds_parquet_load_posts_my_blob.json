@@ -1,0 +1,25 @@
+{
+	"name": "ds_parquet_load_posts_my_blob",
+	"properties": {
+		"description": "A dataset represents the Posts parquet files on your own storage blob.",
+		"linkedServiceName": {
+			"referenceName": "ls_my_blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds-bd-project"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Landing/posts",
+				"container": "bd-project"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

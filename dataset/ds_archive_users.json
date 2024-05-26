@@ -1,0 +1,28 @@
+{
+	"name": "ds_archive_users",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_my_blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds-bd-project/ds-bd-archive"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "rds-users.csv",
+				"folderPath": "Landing/archive-users",
+				"container": "bd-project"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "ds_load_postTypes_my_blob",
+	"properties": {
+		"description": "A dataset represents the postTypes files copied from Postgres and stored in your blob storage",
+		"linkedServiceName": {
+			"referenceName": "ls_my_blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds-bd-project"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "rds-postTypes.csv",
+				"folderPath": "Landing/postTypes",
+				"container": "bd-project"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

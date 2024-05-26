@@ -1,0 +1,24 @@
+{
+	"name": "ds_metadata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_metadata",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds-bd-project"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Landing/posts",
+				"fileSystem": "bd-project"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
